@@ -6,7 +6,9 @@ export default function FavoritesPage() {
       <Head>
         <title>React Meetups - Favorites</title>
       </Head>
-      <div>Favoritos</div>
+      <section>
+        <h1>Favorites Page</h1>
+      </section>
     </>
   );
 }

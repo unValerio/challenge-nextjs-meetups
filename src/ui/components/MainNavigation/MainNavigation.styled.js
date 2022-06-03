@@ -35,7 +35,6 @@ export const MenuLink = styled.a`
   cursor: pointer;
 
   &:hover,
-  &:focus,
   &:active {
     color: white;
   }

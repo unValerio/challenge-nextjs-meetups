@@ -32,13 +32,14 @@ export const MenuLink = styled.a`
   text-decoration: none;
   font-size: 1.5rem;
   color: #fcb8d2;
-`;
+  cursor: pointer;
 
-// .header a:hover,
-// .header a:active,
-// .header a.active {
-//   color: white;
-// }
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+  }
+`;
 
 export const Badge = styled.span`
   background-color: #cc2062;

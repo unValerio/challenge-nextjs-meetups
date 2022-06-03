@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import {
   Header,
   Logo,
@@ -14,17 +16,23 @@ export default function MainNavigation() {
       <nav>
         <List>
           <MenuOption>
-            <MenuLink>All Meetups</MenuLink>
+            <Link href="/">
+              <MenuLink>All Meetups</MenuLink>
+            </Link>
           </MenuOption>
 
           <MenuOption>
-            <MenuLink>Add New Meetup</MenuLink>
+            <Link href="/new-meetup">
+              <MenuLink>Add New Meetup</MenuLink>
+            </Link>
           </MenuOption>
           <MenuOption>
-            <MenuLink>
-              My Favorites
-              <Badge>{0}</Badge>
-            </MenuLink>
+            <Link href="/favorites">
+              <MenuLink>
+                My Favorites
+                <Badge>{0}</Badge>
+              </MenuLink>
+            </Link>
           </MenuOption>
         </List>
       </nav>

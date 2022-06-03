@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { useFetch } from '../../../utils-hooks/useFetch';
+import { useFetch } from '../../../utils/hooks/useFetch';
 import {
   ItemWrapper,
   Card,

@@ -8,6 +8,10 @@ export const Header = styled.header`
   justify-content: space-between;
   background-color: #77002e;
   padding: 0 10%;
+  position: fixed;
+  transition: top 0.6s;
+  z-index: 1;
+  top: ${({ visible }) => (visible ? '0' : '-5rem')};
 `;
 
 export const Logo = styled.div`
@@ -43,7 +47,7 @@ export const MenuLink = styled.a`
 export const Badge = styled.span`
   background-color: #cc2062;
   color: white;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   padding: 0 1rem;
   margin-left: 0.5rem;
 `;

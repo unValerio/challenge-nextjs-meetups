@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
   background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 0.375.rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
 `;
 
 export const Form = styled.form`
@@ -23,8 +23,8 @@ export const Control = styled.div`
   textarea {
     display: block;
     font: inherit;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid #ccc;
     padding: 0.25rem;
     width: 100%;
   }
@@ -40,8 +40,8 @@ export const Actions = styled.div`
     background-color: #77002e;
     color: white;
     padding: 0.5rem 1.5rem;
-    border: 1px solid #77002e;
-    border-radius: 4px;
+    border: 0.0625rem solid #77002e;
+    border-radius: 0.25rem;
     font-weight: bold;
 
     &:hover,

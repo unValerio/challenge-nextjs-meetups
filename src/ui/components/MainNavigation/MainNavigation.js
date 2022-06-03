@@ -1,5 +1,7 @@
+import React from 'react';
 import Link from 'next/link';
 
+import useVisibilityOnScroll from '../../../utils/hooks/useVisibilityOnScroll';
 import {
   Header,
   Logo,
@@ -10,8 +12,10 @@ import {
 } from './MainNavigation.styled';
 
 export default function MainNavigation() {
+  const { visible } = useVisibilityOnScroll();
+
   return (
-    <Header data-test="navigation-header">
+    <Header visible={visible} data-test="navigation-header">
       <Logo>React Meetups</Logo>
       <nav>
         <List>

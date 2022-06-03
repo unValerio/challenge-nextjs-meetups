@@ -6,16 +6,16 @@ export const ItemWrapper = styled.div`
 
 export const Card = styled.div`
   background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 0.375rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
 `;
 
 export const ImageWrapper = styled.div`
   width: 100%;
   height: 20rem;
   overflow: hidden;
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
+  border-top-right-radius: 0.375rem;
+  border-top-left-radius: 0.375rem;
   position: relative;
 `;
 
@@ -37,10 +37,10 @@ export const Actions = styled.div`
     font: inherit;
     cursor: pointer;
     color: #77002e;
-    border: 1px solid #77002e;
+    border: 0.0625rem solid #77002e;
     background-color: transparent;
     padding: 0.5rem 1.5rem;
-    border-radius: 4px;
+    border-radius: 0.25rem;
 
     &:hover,
     &:active {

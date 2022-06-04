@@ -1,9 +1,9 @@
 import Head from 'next/head';
 
-import Layout from '../ui/components/Layout';
-import MainNavigation from '../ui/components/MainNavigation';
+import Layout from '../presenter/components/Layout';
+import MainNavigation from '../presenter/components/MainNavigation';
 
-import GlobalStyle from '../ui/theme/GlobalStyle/GlobalStyle';
+import GlobalStyle from '../presenter/theme/GlobalStyle/GlobalStyle';
 
 function ReactMeetup({ Component, props }) {
   return (

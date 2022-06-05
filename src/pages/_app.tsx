@@ -1,4 +1,3 @@
-import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
 import Layout from '@components/Layout';
@@ -6,7 +5,7 @@ import MainNavigation from '@components/MainNavigation';
 
 import GlobalStyle from '@theme/GlobalStyle/GlobalStyle';
 
-export default function ReactMeetupApp({ Component, props }): AppProps {
+export default function ReactMeetupApp({ Component, props }): JSX.Element {
   return (
     <>
       <Head>

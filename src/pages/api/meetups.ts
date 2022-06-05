@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { meetupApi } from '../../index';
+import { meetupApi } from '@main';
 
 export default function handler(
   req: NextApiRequest,

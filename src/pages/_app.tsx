@@ -1,11 +1,11 @@
 import Head from 'next/head';
 
-import Layout from '../ui/components/Layout';
-import MainNavigation from '../ui/components/MainNavigation';
+import Layout from '@components/Layout';
+import MainNavigation from '@components/MainNavigation';
 
-import GlobalStyle from '../ui/theme/GlobalStyle/GlobalStyle';
+import GlobalStyle from '@theme/GlobalStyle/GlobalStyle';
 
-function ReactMeetup({ Component, props }) {
+export default function ReactMeetupApp({ Component, props }): JSX.Element {
   return (
     <>
       <Head>
@@ -19,5 +19,3 @@ function ReactMeetup({ Component, props }) {
     </>
   );
 }
-
-export default ReactMeetup;

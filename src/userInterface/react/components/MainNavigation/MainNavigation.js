@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import useVisibilityOnScroll from '../../../utils/hooks/useVisibilityOnScroll';
+import useVisibilityOnScroll from '../../utils/hooks/useVisibilityOnScroll';
 import {
   Header,
   Logo,

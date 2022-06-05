@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Proyecto "React Meetup"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
+Este proyecto es un sitio web para "Meetups" y su administración, permite visualizar los existentes, crear nuevos y agregarlos o quitarlos de favoritos.
 
-## Available Scripts
+## Ejecución:
+`yarn dev`
 
-In the project directory, you can run:
+## Funcionamiento:
+El proyecto corre con Next.js, por lo que la estructura cambió completamente a como estaba originalmente, ahora se cuentan con las ventajas de JavaScript Universal (Isomporphic) como la optimización del tiempo de renderizado, navegación por URL y la optimización para buscadores (SEO). También se cambió la estrategia de carga de estilos. Ahora funciona con styled-components.
 
-### `npm start`
+## Notas:
+Se implementó una Arquitectura Hexagonal con Domain Driven Design (DDD) respetando principios SOLID y de Clean Code.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para este proyecto que es muy pequeño podría considerarse "excesivo" sobretodo por el tiempo invertido en el desarrollo. Sin embargo se tomó a consideración como si este proyecto ficticio fuera a crecer mucho y a involucrar a muchos desarrolladores nuevos, con lo cual gracias a la implementación de esta arquitectura y a las buenas prácticas de desarrollo, el mantenimiento y escalabilidad resultaría muy adecuado y mucho más sencillo que si no se hubiera implementado la arquitectura propuesta.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pendientes:
+Debido al poco tiempo disponible para trabajar en este proyecto, se priorizó cumplir con las características solicitadas y su buen funcionamiento además de re-estructurar su arquitectura para cumplir con buenas prácticas pensando en el mantenimiento y escalabilidad a futuro.
 
-### `npm test`
+**Los siguientes puntos quedan pendientes para ser trabajados más adelante:**
+- Falta crear menu de hamburguesa
+- Falta manejo de errores
+- Faltan tests
+- Falta coverage
+- Falta convertir archivos a Typescript
+- Falta implementar PropTypes
+- Falta implementar un repositorio de base de datos en vez de almacenamiento en archivos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Desarrollado con ❤️ por Sergio Enrique Vargas🦊 para Stradivarius

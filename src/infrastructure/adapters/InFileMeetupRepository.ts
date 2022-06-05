@@ -4,8 +4,7 @@ import readMeetupsFile from '@infrastructure/inFileStorage/readMeetupsFile';
 
 export default class InFileMeetupRepository implements MeetupRepository {
   async getAll(): Promise<MeetupEntity[]> {
-    const meetupsArray = await readMeetupsFile();
-    const meetups = meetupsArray.map((meetup) => new MeetupEntity(meetup));
+    const meetups = await readMeetupsFile();
     return meetups;
   }
 }

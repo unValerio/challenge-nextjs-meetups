@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import MeetupItem from '../../components/MeetupItem';
+import MeetupItem from '@components/MeetupItem';
 import { MeetupsContainer } from './AllMeetupsPage.styled';
 
 export default function AllMeetups() {

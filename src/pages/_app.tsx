@@ -1,11 +1,12 @@
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import Layout from '../presenter/components/Layout';
-import MainNavigation from '../presenter/components/MainNavigation';
+import Layout from '@components/Layout';
+import MainNavigation from '@components/MainNavigation';
 
-import GlobalStyle from '../presenter/theme/GlobalStyle/GlobalStyle';
+import GlobalStyle from '@theme/GlobalStyle/GlobalStyle';
 
-function ReactMeetup({ Component, props }) {
+export default function ReactMeetupApp({ Component, props }): AppProps {
   return (
     <>
       <Head>
@@ -19,5 +20,3 @@ function ReactMeetup({ Component, props }) {
     </>
   );
 }
-
-export default ReactMeetup;

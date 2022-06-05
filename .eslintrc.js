@@ -10,7 +10,7 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
-      // parser: '@typescript-eslint/parser',
+      parser: '@typescript-eslint/parser',
       settings: { react: { version: 'detect' } },
       env: {
         browser: true,
@@ -19,7 +19,7 @@ module.exports = {
       },
       extends: [
         'eslint:recommended',
-        // 'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended',
         'plugin:react/recommended',
         'plugin:react-hooks/recommended',
         'plugin:jsx-a11y/recommended',
@@ -30,14 +30,14 @@ module.exports = {
         'react/prop-types': 'off',
         'react/react-in-jsx-scope': 'off',
         'jsx-a11y/anchor-is-valid': 'off',
-        // '@typescript-eslint/no-unused-vars': ['error'],
-        // '@typescript-eslint/explicit-function-return-type': [
-        //   'warn',
-        //   {
-        //     allowExpressions: true,
-        //     allowConciseArrowFunctionExpressionsStartingWithVoid: true,
-        //   },
-        // ],
+        '@typescript-eslint/no-unused-vars': ['error'],
+        '@typescript-eslint/explicit-function-return-type': [
+          'warn',
+          {
+            allowExpressions: true,
+            allowConciseArrowFunctionExpressionsStartingWithVoid: true,
+          },
+        ],
         'prettier/prettier': ['error', {}, { usePrettierrc: true }],
       },
     },

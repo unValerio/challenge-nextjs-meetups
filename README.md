@@ -35,5 +35,6 @@ Debido al poco tiempo disponible para trabajar en este proyecto, se priorizó cu
 - Mostrar un loader cada vez que se ejecuta un action que invoque a una Saga (comportamientos asíncronos)
 - Crear un pipeline para correr lintern y tests automáticamente
 - Implementar el sistema en producción
+- Aprender más sobre la lógica de negocio para priorizar pendientes y proponer nuevas tareas y buscar bugs
 
 Desarrollado con ❤️ por Sergio Enrique Vargas🦊 para Stradivarius

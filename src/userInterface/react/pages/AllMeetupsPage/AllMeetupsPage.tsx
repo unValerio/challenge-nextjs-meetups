@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Head from 'next/head';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -8,15 +8,17 @@ import { MeetupsContainer } from './AllMeetupsPage.styled';
 import * as meetupActionCreators from '@state/actionCreators/meetup/meetupActionCreators';
 
 export default function AllMeetups(): JSX.Element {
-  const meetups = useSelector(
-    (state: RootState) => state.meetupReducer.meetups
-  );
   const dispatch = useDispatch();
 
+  const { meetups, addToFavoritesSuccess, removeFromFavoritesSuccess } =
+    useSelector((state: RootState) => state.meetupReducer);
+
   useEffect(() => {
-    dispatch(meetupActionCreators.getAllMeetups());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    if (addToFavoritesSuccess || removeFromFavoritesSuccess) {
+      dispatch(meetupActionCreators.getAllMeetups());
+      dispatch(meetupActionCreators.clean());
+    }
+  }, [dispatch, addToFavoritesSuccess, removeFromFavoritesSuccess]);
 
   return (
     <>

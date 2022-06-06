@@ -16,10 +16,8 @@ export const getAll = async (): Promise<MeetupEntity[]> => {
   return res.data;
 };
 
-export const createNew = async (
-  meetupValues: MeetupType
-): Promise<MeetupEntity[]> => {
-  const [err, res] = await to(
+export const createNew = async (meetupValues: MeetupType): Promise<void> => {
+  const [err] = await to(
     axios({
       method: 'POST',
       url: '/api/meetups',
@@ -28,5 +26,21 @@ export const createNew = async (
   );
   if (err) throw new Error('Error al crear meetup');
 
-  return res.data;
+  return;
+};
+
+export const changeFavoriteStatus = async (
+  id: string,
+  newFavoriteStatus: boolean
+): Promise<void> => {
+  const [err] = await to(
+    axios({
+      method: 'PATCH',
+      url: `/api/meetups/${id}`,
+      data: { isFavorite: newFavoriteStatus },
+    })
+  );
+  if (err) throw new Error('Error al agregar a favoritos');
+
+  return;
 };

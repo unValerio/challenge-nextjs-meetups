@@ -11,8 +11,15 @@ import {
   Badge,
 } from './MainNavigation.styled';
 
-export default function MainNavigation() {
+export default function MainNavigation({ meetups }): JSX.Element {
   const { visible } = useVisibilityOnScroll();
+
+  const favoriteMeetups = meetups.reduce((total, meetup) => {
+    if (meetup.isFavorite) {
+      return total + 1;
+    }
+    return total;
+  }, 0);
 
   return (
     <Header visible={visible} data-test="navigation-header">
@@ -34,7 +41,7 @@ export default function MainNavigation() {
             <Link href="/favorites">
               <MenuLink>
                 My Favorites
-                <Badge>{0}</Badge>
+                <Badge>{favoriteMeetups}</Badge>
               </MenuLink>
             </Link>
           </MenuOption>

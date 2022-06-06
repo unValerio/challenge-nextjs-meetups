@@ -4,14 +4,16 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { RootState } from '@userInterface/react/state';
 import MeetupItem from '@components/MeetupItem';
-import { MeetupsContainer } from './AllMeetupsPage.styled';
 import * as meetupActionCreators from '@state/actionCreators/meetup/meetupActionCreators';
+import { MeetupsContainer } from './FavoritesPage.styled';
 
-export default function AllMeetups(): JSX.Element {
+export default function FavoritesPage(): JSX.Element {
   const dispatch = useDispatch();
 
   const { meetups, addToFavoritesSuccess, removeFromFavoritesSuccess } =
     useSelector((state: RootState) => state.meetupReducer);
+
+  const favoriteMeetups = meetups.filter((meetup) => meetup.isFavorite);
 
   useEffect(() => {
     if (addToFavoritesSuccess || removeFromFavoritesSuccess) {
@@ -23,14 +25,17 @@ export default function AllMeetups(): JSX.Element {
   return (
     <>
       <Head>
-        <title>React Meetups</title>
+        <title>React Meetups - Favorites</title>
       </Head>
       <section>
-        <h1>All Meetups</h1>
+        <h1>Favorites Page</h1>
         <MeetupsContainer>
-          {meetups.map((meetup) => (
+          {favoriteMeetups.map((meetup) => (
             <MeetupItem key={meetup.id} meetup={meetup} />
           ))}
+          {favoriteMeetups.length === 0 && (
+            <h3>You doesn&apos;t have favorites yet</h3>
+          )}
         </MeetupsContainer>
       </section>
     </>

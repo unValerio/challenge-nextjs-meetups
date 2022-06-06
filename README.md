@@ -23,7 +23,7 @@ Debido al poco tiempo disponible para trabajar en este proyecto, se priorizó cu
 - Falta crear menu de hamburguesa para navegar en dispositivos móviles
 - Falta manejo de errores
 - Faltan más tests y crear un reporte de coverage
-- Falta terminar de convertir todos archivos a Typescript
+- Falta terminar de convertir todos archivos a Typescript y corregir types
 - Falta implementar PropTypes en los componentes de react
 - Falta implementar un repositorio de base de datos en vez de almacenamiento en archivos
 - Manejo de errores
@@ -35,5 +35,6 @@ Debido al poco tiempo disponible para trabajar en este proyecto, se priorizó cu
 - Mostrar un loader cada vez que se ejecuta un action que invoque a una Saga (comportamientos asíncronos)
 - Crear un pipeline para correr lintern y tests automáticamente
 - Implementar el sistema en producción
+- Aprender más sobre la lógica de negocio para priorizar pendientes y proponer nuevas tareas y buscar bugs
 
 Desarrollado con ❤️ por Sergio Enrique Vargas🦊 para Stradivarius

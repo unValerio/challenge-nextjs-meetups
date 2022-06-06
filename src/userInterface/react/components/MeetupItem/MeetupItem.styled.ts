@@ -32,19 +32,34 @@ export const Content = styled.div`
 export const Actions = styled.div`
   padding: 1.5rem;
   text-align: center;
+`;
 
-  button {
-    font: inherit;
-    cursor: pointer;
-    color: #77002e;
-    border: 0.0625rem solid #77002e;
-    background-color: transparent;
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.25rem;
+export const AddButton = styled.button`
+  font: inherit;
+  cursor: pointer;
+  color: #77002e;
+  border: 0.0625rem solid #77002e;
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
 
-    &:hover,
-    &:active {
-      background-color: #ffe2ed;
-    }
+  &:hover,
+  &:active {
+    background-color: #ffe2ed;
+  }
+`;
+
+export const RemoveButton = styled.button`
+  font: inherit;
+  cursor: pointer;
+  color: white;
+  border: 0.0625rem solid #77002e;
+  background-color: #77002e;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+
+  &:hover,
+  &:active {
+    background-color: #ffe2ed;
   }
 `;

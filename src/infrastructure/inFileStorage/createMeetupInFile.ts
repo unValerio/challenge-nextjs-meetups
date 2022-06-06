@@ -12,8 +12,9 @@ export default async function createMeetupInFile(
   const meetups = await readMeetupsFile();
 
   const id = uuidv4();
+  const creationDate = new Date();
 
-  meetups.push({ id, ...meetup });
+  meetups.push({ id, creationDate, ...meetup });
 
   const meetupsDataToWrite = Buffer.from(JSON.stringify(meetups, null, 2));
   return fsPromises.writeFile(meetupsFilePath, meetupsDataToWrite);

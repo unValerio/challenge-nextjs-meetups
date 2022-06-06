@@ -5,6 +5,7 @@ Este proyecto es un sitio web para "Meetups" y su administración, permite visua
 
 ## Ejecución:
 `yarn dev`
+Navegar a `http://localhost:3000` en el explorador
 
 ## Funcionamiento:
 El proyecto corre con Next.js, por lo que la estructura cambió completamente a como estaba originalmente, ahora se cuentan con las ventajas de JavaScript Universal (Isomporphic) como la optimización del tiempo de renderizado, navegación por URL y la optimización para buscadores (SEO). También se cambió la estrategia de carga de estilos. Ahora funciona con styled-components.
@@ -36,5 +37,6 @@ Debido al poco tiempo disponible para trabajar en este proyecto, se priorizó cu
 - Crear un pipeline para correr lintern y tests automáticamente
 - Implementar el sistema en producción
 - Aprender más sobre la lógica de negocio para priorizar pendientes y proponer nuevas tareas y buscar bugs
+
 
 Desarrollado con ❤️ por Sergio Enrique Vargas🦊 para Stradivarius

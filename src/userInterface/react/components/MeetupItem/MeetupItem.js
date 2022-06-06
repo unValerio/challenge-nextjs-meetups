@@ -13,13 +13,15 @@ export default function MeetupItem({ meetup }) {
     <ItemWrapper>
       <Card>
         <ImageWrapper>
-          <Image
-            src={meetup.image}
-            alt={meetup.title}
-            layout="fill"
-            objectFit="cover"
-            priority={50}
-          />
+          {meetup.image && (
+            <Image
+              src={`https://res.cloudinary.com/demo/image/fetch/${meetup.image}`}
+              alt={meetup.title}
+              layout="fill"
+              objectFit="cover"
+              priority={50}
+            />
+          )}
         </ImageWrapper>
         <Content>
           <h3>{meetup.title}</h3>

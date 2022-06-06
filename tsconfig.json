@@ -25,7 +25,13 @@
       ],
       "@theme/*": [
         "userInterface/react/theme/*"
-      ]
+      ],
+      "@services/*": [
+        "userInterface/react/services/*"
+      ],
+      "@state/*": [
+        "userInterface/react/state/*"
+      ],
     },
     "target": "es2017",
     "lib": [

@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { shallow } from 'enzyme';
 
 import withReduxProvider from '@userInterface/react/utils/testing/withReduxProvider';
@@ -17,11 +18,10 @@ describe('Components - MeetupItem', () => {
   it('renders <MeetupItem/>  without crashing', () => {
     const store = {};
 
-    const MeetupItemWithProps = (): JSX.Element => (
-      <MeetupItem meetup={meetup} />
-    );
+    const MeetupItemWithProps: React.FC = () => <MeetupItem meetup={meetup} />;
 
-    const TestComponent = withReduxProvider(store)(MeetupItemWithProps);
+    const TestComponent: React.FC =
+      withReduxProvider(store)(MeetupItemWithProps);
 
     const wrapper = shallow(<TestComponent />);
     expect(wrapper.exists()).toBe(true);

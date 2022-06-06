@@ -1,11 +1,16 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
 import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 
-const DefaultWrappedComponent = ({ children }) => <div>{children}</div>;
+interface Props {
+  children: React.ReactNode;
+}
+
+const DefaultWrappedComponent: React.FC<Props> = ({ children }) => <>{children}</>;
 
 const withReduxProvider =
   (store) =>
@@ -13,8 +18,8 @@ const withReduxProvider =
       const mockStore = configureStore();
       const wrapper = ({ children }) => {
         return (
-          <Provider store={mockStore(store)}>
-            <WrappedComponent>{children}</WrappedComponent>
+          <Provider store={mockStore(store)} >
+            <WrappedComponent>{children} </WrappedComponent>
           </Provider>
         );
       };
@@ -23,7 +28,7 @@ const withReduxProvider =
     };
 
 export const mountComponentWithStore = (Component, store) => {
-  const TestComponent = withReduxProvider(store)(Component);
+  const TestComponent: React.FC = withReduxProvider(store)(Component);
   return mount(<TestComponent />);
 };
 

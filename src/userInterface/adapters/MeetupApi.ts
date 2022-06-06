@@ -16,4 +16,12 @@ export default class MeetupApi {
     const meetups = await this.meetupApplication.getAll();
     res.status(200).json(meetups);
   }
+
+  public async createNew(
+    req: NextApiRequest,
+    res: NextApiResponse
+  ): Promise<void> {
+    await this.meetupApplication.createNew(req.body);
+    res.status(200).json({});
+  }
 }

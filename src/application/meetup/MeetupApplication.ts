@@ -11,6 +11,11 @@ export default class MeetupApplication implements MeetupDrivingPort {
 
   public async getAll(): Promise<MeetupEntity[]> {
     const meetups = await this.meetupRepository.getAll();
-    return meetups;
+
+    return meetups.reverse();
+  }
+
+  public async createNew(meetup: MeetupEntity): Promise<void> {
+    await this.meetupRepository.createNew(meetup);
   }
 }

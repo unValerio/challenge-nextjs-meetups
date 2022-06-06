@@ -2,31 +2,29 @@ import MeetupEntity from '@domain/meetup/MeetupEntity';
 
 const initialData: MeetupEntity[] = [
   {
-    id: 'm1',
-    title: 'This is a first meetup',
+    id: '5203308e-023f-4174-96f3-ec0c23ff056c',
+    title: 'Mexico City',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',
-    address: 'Meetupstreet 5, 12345 Meetup City',
-    description:
-      'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',
+      'https://traveldelite.com/wp-content/uploads/2016/05/mexico-city.jpg',
+    address: 'Alameda Central, México Centro, México',
+    description: 'Hermoso lugar, capital de la República Mexicana',
   },
   {
-    id: 'm2',
-    title: 'This is a second meetup',
+    id: '7dbc9077-a9d1-455d-8738-1e7e170e460c',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',
-    address: 'Meetupstreet 5, 12345 Meetup City',
-    description:
-      'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',
+      'https://wallsdesk.com/wp-content/uploads/2017/01/Pictures-of-Salamanca-.jpg',
+    address: 'Salamanca, España',
+    title: 'Ciudad de Salamanca',
+    description: 'Otro hermoso lugar',
   },
   {
-    id: 'm3',
-    title: 'This is a third meetup',
+    id: '49f5aec5-4f63-4c01-9ae0-3ec605f760a5',
+    title: 'Stradivarius Headquarters',
     image:
-      'https://www.deutschakademie.de/muenchen/blog/wp-content/uploads/2021/03/Mu%CC%88nchen-Alemania.jpg',
-    address: 'Meetupstreet 5, 12345 Meetup City',
+      'https://www.floornature.com/media/photos/30/13912/22_batlleiroig_stradivarius_full.jpg',
+    address: 'Cerdanyola del Vallès',
     description:
-      'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',
+      'Cerdanyola del Vallès is a municipality in the comarca of the Vallès Occidental in Catalonia, Spain. ',
   },
 ];
 export default initialData;

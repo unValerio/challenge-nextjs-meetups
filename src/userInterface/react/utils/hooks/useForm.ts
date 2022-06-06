@@ -5,7 +5,8 @@ type useFormReturnType = {
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
   onSubmit: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
-  values: object;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  values: any;
 };
 
 export const useForm = (

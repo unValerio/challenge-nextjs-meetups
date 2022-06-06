@@ -22,16 +22,18 @@ Debido al poco tiempo disponible para trabajar en este proyecto, se priorizó cu
 **Se proponen los siguientes puntos para mejorar el sistema:**
 - Falta crear menu de hamburguesa para navegar en dispositivos móviles
 - Falta manejo de errores
-- Faltan tests
-- Falta coverage
+- Faltan más tests y crear un reporte de coverage
 - Falta terminar de convertir todos archivos a Typescript
 - Falta implementar PropTypes en los componentes de react
 - Falta implementar un repositorio de base de datos en vez de almacenamiento en archivos
 - Manejo de errores
 - i18n para no hardcodear textos y/o permitir nuevos idiomas
+- Crear una lista de colores en Theme para no hardcodearlos en los estilos
 - La configuración de yarn lint no es muy estricta y hay errores o archivos que no detecta
 - Corregir Types de los Generators de las Sagas
 - Se está haciendo doble llamada al API para obtener todos los meetups al cargar la página. Hay que corregir para que sólo sea una vez
 - Mostrar un loader cada vez que se ejecuta un action que invoque a una Saga (comportamientos asíncronos)
+- Crear un pipeline para correr lintern y tests automáticamente
+- Implementar el sistema en producción
 
 Desarrollado con ❤️ por Sergio Enrique Vargas🦊 para Stradivarius

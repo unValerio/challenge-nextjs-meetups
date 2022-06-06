@@ -1,4 +1,4 @@
-import { call, ForkEffect, put, takeEvery } from 'redux-saga/effects';
+import { call, ForkEffect, put, take, takeEvery } from 'redux-saga/effects';
 
 import * as meetupService from '@services/meetupService';
 import ActionTypes from '@state/ActionTypes';
@@ -9,6 +9,14 @@ export function* getAll(): Generator {
   yield put(meetupActionCreators.getAllMeetupsSuccess(meetups));
 }
 
+export function* createNew(
+  action: meetupActionCreators.MeetupAction
+): Generator {
+  yield call(meetupService.createNew, action.payload);
+  yield put(meetupActionCreators.createNewSuccess());
+}
+
 export default function* root(): Generator<ForkEffect> {
   yield takeEvery(ActionTypes.GET_ALL_MEETUPS, getAll);
+  yield takeEvery(ActionTypes.CREATE_NEW_MEETUP, createNew);
 }

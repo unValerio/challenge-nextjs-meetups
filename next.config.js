@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['upload.wikimedia.org'],
+    domains: ['res.cloudinary.com'],
   },
   webpack: (config) => {
     config.experiments.topLevelAwait = true;

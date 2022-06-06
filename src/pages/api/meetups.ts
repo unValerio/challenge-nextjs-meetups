@@ -7,7 +7,7 @@ export default function handler(
   res: NextApiResponse
 ): void {
   if (req.method === 'POST') {
-    // meetupApi.postMeetup(req, res);
+    meetupApi.createNew(req, res);
   } else {
     meetupApi.getAll(req, res);
   }

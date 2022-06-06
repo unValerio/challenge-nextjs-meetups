@@ -12,8 +12,12 @@ export function* getAll(): Generator {
 export function* createNew(
   action: meetupActionCreators.MeetupAction
 ): Generator {
-  yield call(meetupService.createNew, action.payload);
-  yield put(meetupActionCreators.createNewSuccess());
+  try {
+    yield call(meetupService.createNew, action.payload);
+    yield put(meetupActionCreators.createNewSuccess());
+  } catch (err) {
+    yield put(meetupActionCreators.createNewFailure(err));
+  }
 }
 
 export default function* root(): Generator<ForkEffect> {

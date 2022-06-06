@@ -4,11 +4,13 @@ import { MeetupActionCreator } from '../../actionCreators/meetup/meetupActionCre
 
 type MeetupState = {
   meetups: MeetupEntity[];
+  createMeetupSuccess: boolean;
   error: string;
 };
 
 export const initialState: MeetupState = {
   meetups: [],
+  createMeetupSuccess: undefined,
   error: undefined,
 };
 
@@ -22,6 +24,13 @@ export default function meetupReducer(
         ...state,
         meetups: action.payload.meetups,
         error: undefined,
+      };
+      break;
+
+    case ActionTypes.CREATE_NEW_MEETUP_SUCCESS:
+      return {
+        ...state,
+        createMeetupSuccess: true,
       };
       break;
 

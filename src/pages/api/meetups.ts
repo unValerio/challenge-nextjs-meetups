@@ -8,6 +8,7 @@ export default function handler(
 ): void {
   if (req.method === 'POST') {
     // meetupApi.postMeetup(req, res);
+    res.status(200).json({});
   } else {
     meetupApi.getAll(req, res);
   }

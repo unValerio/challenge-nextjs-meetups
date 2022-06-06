@@ -1,11 +1,23 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { RootState } from '@userInterface/react/state';
 import { Card, Form, Control, Actions } from './NewMeetupForm.styled';
 import { useForm } from '@userInterface/react/utils/hooks/useForm';
 import * as meetupActionCreators from '@userInterface/react/state/actionCreators/meetup/meetupActionCreators';
+import { useEffect } from 'react';
 
 export default function NewMeetupForm(): JSX.Element {
   const dispatch = useDispatch();
+
+  const createMeetupSuccess = useSelector(
+    (state: RootState) => state.meetupReducer.createMeetupSuccess
+  );
+
+  useEffect(() => {
+    if (createMeetupSuccess) {
+      window.location.href = '/';
+    }
+  }, [createMeetupSuccess]);
 
   const { onChange, onSubmit, values } = useForm(newMeetupSubmitCallback, {});
 

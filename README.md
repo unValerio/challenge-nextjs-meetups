@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Proyecto "React Meetup"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
+Este proyecto es un sitio web para "Meetups" y su administración, permite visualizar los existentes, crear nuevos y agregarlos o quitarlos de favoritos.
 
-## Available Scripts
+## Ejecución:
+`yarn dev`
+Navegar a `http://localhost:3000` en el explorador
 
-In the project directory, you can run:
+## Funcionamiento:
+El proyecto corre con Next.js, por lo que la estructura cambió completamente a como estaba originalmente, ahora se cuentan con las ventajas de JavaScript Universal (Isomporphic) como la optimización del tiempo de renderizado, navegación por URL y la optimización para buscadores (SEO). También se cambió la estrategia de carga de estilos. Ahora funciona con styled-components.
 
-### `npm start`
+El estado de la aplicación en React se implementó con Redux y el manejo asíncrono con Redux-Saga.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Notas:
+Se implementó una Arquitectura Hexagonal con Domain Driven Design (DDD) respetando principios SOLID y de Clean Code.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para este proyecto que es muy pequeño podría considerarse "excesivo" sobretodo por el tiempo invertido en el desarrollo. Sin embargo se tomó a consideración como si este proyecto ficticio fuera a crecer mucho y a involucrar a muchos desarrolladores nuevos, con lo cual gracias a la implementación de esta arquitectura y a las buenas prácticas de desarrollo, el mantenimiento y escalabilidad resultaría muy adecuado y mucho más sencillo que si no se hubiera implementado la arquitectura propuesta.
 
-### `npm test`
+## Pendientes:
+Debido al poco tiempo disponible para trabajar en este proyecto, se priorizó cumplir con las características solicitadas y su buen funcionamiento además de re-estructurar su arquitectura para cumplir con buenas prácticas pensando en el mantenimiento y escalabilidad a futuro.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Se proponen los siguientes puntos para mejorar el sistema:**
+- Falta crear menu de hamburguesa para navegar en dispositivos móviles
+- Falta manejo de errores
+- Se crearon tests para el componente MainNavigation únicamente (era requisito del proyecto) porque había prioridad de entregar los demás requisitos. Pero se recomendaría aumentar el coverage en un escenario real.
+- Falta terminar de convertir todos archivos a Typescript y corregir types
+- Falta implementar PropTypes en los componentes de react
+- Falta implementar un repositorio de base de datos en vez de almacenamiento en archivos
+- Manejo de errores
+- i18n para no hardcodear textos y/o permitir nuevos idiomas
+- Crear una lista de colores en Theme para no hardcodearlos en los estilos
+- La configuración de yarn lint no es muy estricta y hay errores o archivos que no detecta
+- Corregir Types de los Generators de las Sagas
+- Se está haciendo doble llamada al API para obtener todos los meetups al cargar la página. Hay que corregir para que sólo sea una vez
+- Se reutilizaron interfaces de backend en la app de react y en la infraestructura para reutilizar código y terminar a tiempo la entrega, pero lo ideal sería disminuir el "acomplamiento", por lo que se sugiere crear interfaces únicas para dichas secciones
+- Mostrar un loader cada vez que se ejecuta un action que invoque a una Saga (comportamientos asíncronos)
+- Crear un pipeline para correr lintern y tests automáticamente
+- Implementar el sistema en producción
+- Aprender más sobre la lógica de negocio para priorizar pendientes y proponer nuevas tareas y buscar bugs
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Desarrollado con ❤️ por Sergio Enrique Vargas🦊 para Stradivarius

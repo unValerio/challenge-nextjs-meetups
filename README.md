@@ -23,7 +23,7 @@ Debido al poco tiempo disponible para trabajar en este proyecto, se priorizó cu
 **Se proponen los siguientes puntos para mejorar el sistema:**
 - Falta crear menu de hamburguesa para navegar en dispositivos móviles
 - Falta manejo de errores
-- Faltan más tests y crear un reporte de coverage
+- Se crearon tests para el componente MainNavigation únicamente (era requisito del proyecto) porque había prioridad de entregar los demás requisitos. Pero se recomendaría aumentar el coverage en un escenario real.
 - Falta terminar de convertir todos archivos a Typescript y corregir types
 - Falta implementar PropTypes en los componentes de react
 - Falta implementar un repositorio de base de datos en vez de almacenamiento en archivos
@@ -33,10 +33,10 @@ Debido al poco tiempo disponible para trabajar en este proyecto, se priorizó cu
 - La configuración de yarn lint no es muy estricta y hay errores o archivos que no detecta
 - Corregir Types de los Generators de las Sagas
 - Se está haciendo doble llamada al API para obtener todos los meetups al cargar la página. Hay que corregir para que sólo sea una vez
+- Se reutilizaron interfaces de backend en la app de react y en la infraestructura para reutilizar código y terminar a tiempo la entrega, pero lo ideal sería disminuir el "acomplamiento", por lo que se sugiere crear interfaces únicas para dichas secciones
 - Mostrar un loader cada vez que se ejecuta un action que invoque a una Saga (comportamientos asíncronos)
 - Crear un pipeline para correr lintern y tests automáticamente
 - Implementar el sistema en producción
 - Aprender más sobre la lógica de negocio para priorizar pendientes y proponer nuevas tareas y buscar bugs
-
 
 Desarrollado con ❤️ por Sergio Enrique Vargas🦊 para Stradivarius

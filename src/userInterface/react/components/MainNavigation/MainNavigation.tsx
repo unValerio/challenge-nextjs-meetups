@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
+import MeetupEntity from '@domain/meetup/MeetupEntity';
 import useVisibilityOnScroll from '../../utils/hooks/useVisibilityOnScroll';
 import {
   Header,
@@ -11,15 +12,19 @@ import {
   Badge,
 } from './MainNavigation.styled';
 
-export default function MainNavigation({ meetups }): JSX.Element {
-  const { visible } = useVisibilityOnScroll();
+type MeetupList = Array<MeetupEntity>;
 
-  const favoriteMeetups = meetups.reduce((total, meetup) => {
+export const findFavoriteMeetupsTotal = (meetups: MeetupList): number =>
+  meetups.reduce((total, meetup) => {
     if (meetup.isFavorite) {
       return total + 1;
     }
     return total;
   }, 0);
+
+export default function MainNavigation({ meetups }): JSX.Element {
+  const { visible } = useVisibilityOnScroll();
+  const favoriteMeetupsTotal = findFavoriteMeetupsTotal(meetups);
 
   return (
     <Header visible={visible} data-test="navigation-header">
@@ -41,7 +46,7 @@ export default function MainNavigation({ meetups }): JSX.Element {
             <Link href="/favorites">
               <MenuLink>
                 My Favorites
-                <Badge>{favoriteMeetups}</Badge>
+                <Badge>{favoriteMeetupsTotal}</Badge>
               </MenuLink>
             </Link>
           </MenuOption>

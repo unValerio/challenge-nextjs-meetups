@@ -1,42 +1,43 @@
-# Proyecto "React Meetup"
+# Project "React Meetup"
 
-## Descripción
-Este proyecto es un sitio web para "Meetups" y su administración, permite visualizar los existentes, crear nuevos y agregarlos o quitarlos de favoritos.
+## Description
+This project is a websites for "Meetups" and its administration, it allows you to visualize existing ones, create news and add or remove from favorites
 
-## Ejecución:
+## Requirements:
+* node v16.15.1
+* yarn (npm install -g yarn)
+
+## How to install:
+`yarn install`
+
+## How to run:
 `yarn dev`
-Navegar a `http://localhost:3000` en el explorador
+Navigate to `http://localhost:3000`
 
-## Funcionamiento:
-El proyecto corre con Next.js, por lo que la estructura cambió completamente a como estaba originalmente, ahora se cuentan con las ventajas de JavaScript Universal (Isomporphic) como la optimización del tiempo de renderizado, navegación por URL y la optimización para buscadores (SEO). También se cambió la estrategia de carga de estilos. Ahora funciona con styled-components.
+## How does it work:
+This project runs on Next.js, so we have the advantages of Universal Javascript (Isomorphic) like rendering time optimization, routing via URL and SEO performance.
 
-El estado de la aplicación en React se implementó con Redux y el manejo asíncrono con Redux-Saga.
+The React web-app uses Redux as state management system with asyncronous middleware using Redux-Saga
 
-## Notas:
-Se implementó una Arquitectura Hexagonal con Domain Driven Design (DDD) respetando principios SOLID y de Clean Code.
+## Notes:
+I implemente an Hexagonal Architecture with Domain Driven Design (DDD) respecting SOLID principles and Clean Code
 
-Para este proyecto que es muy pequeño podría considerarse "excesivo" sobretodo por el tiempo invertido en el desarrollo. Sin embargo se tomó a consideración como si este proyecto ficticio fuera a crecer mucho y a involucrar a muchos desarrolladores nuevos, con lo cual gracias a la implementación de esta arquitectura y a las buenas prácticas de desarrollo, el mantenimiento y escalabilidad resultaría muy adecuado y mucho más sencillo que si no se hubiera implementado la arquitectura propuesta.
+This is a small project so this architecture could be considered as "excesive", although I took into account as if this fictional project was required to keep scaling and more developers join the team. So now that we have this architecture and good practices, mantaining and scalability would become very appropiate and easier to keep coding than if we would started with a non-layered architecture.
 
-## Pendientes:
-Debido al poco tiempo disponible para trabajar en este proyecto, se priorizó cumplir con las características solicitadas y su buen funcionamiento además de re-estructurar su arquitectura para cumplir con buenas prácticas pensando en el mantenimiento y escalabilidad a futuro.
+## Proposal of tasks to improve the project:
+- Create a "burger" menu so mobile browsing could be more friendly
+- To handle errors
+- To increase testing coverage
+- Some of the files are not yet in Typescript and some other need type fixing
+- Use PropTypes or Porp interface in react components
+- Implement a "repository" of database instead of the in-file storage implementation
+- Setup i18n for texts source of true and new languages support
+- Complete the lintern configuration because right now is not strict and some erros undetected
+- Fix Saga's Generator function Types
+- Creat specific types for the Frontend in order to de-coupled its dependency with the backend
+- Show a spinner loader every time a Saga is invoked (asyncronous actions)
+- Create pipelines for automatic linting and testink (CI)
+- Implement the project in production
+- Learn more about the business logic to prioritize tasks and create a better and stable product
 
-**Se proponen los siguientes puntos para mejorar el sistema:**
-- Falta crear menu de hamburguesa para navegar en dispositivos móviles
-- Falta manejo de errores
-- Se crearon tests para el componente MainNavigation únicamente (era requisito del proyecto) porque había prioridad de entregar los demás requisitos. Pero se recomendaría aumentar el coverage en un escenario real.
-- Falta terminar de convertir todos archivos a Typescript y corregir types
-- Falta implementar PropTypes en los componentes de react
-- Falta implementar un repositorio de base de datos en vez de almacenamiento en archivos
-- Manejo de errores
-- i18n para no hardcodear textos y/o permitir nuevos idiomas
-- Crear una lista de colores en Theme para no hardcodearlos en los estilos
-- La configuración de yarn lint no es muy estricta y hay errores o archivos que no detecta
-- Corregir Types de los Generators de las Sagas
-- Se está haciendo doble llamada al API para obtener todos los meetups al cargar la página. Hay que corregir para que sólo sea una vez
-- Se reutilizaron interfaces de backend en la app de react y en la infraestructura para reutilizar código y terminar a tiempo la entrega, pero lo ideal sería disminuir el "acomplamiento", por lo que se sugiere crear interfaces únicas para dichas secciones
-- Mostrar un loader cada vez que se ejecuta un action que invoque a una Saga (comportamientos asíncronos)
-- Crear un pipeline para correr lintern y tests automáticamente
-- Implementar el sistema en producción
-- Aprender más sobre la lógica de negocio para priorizar pendientes y proponer nuevas tareas y buscar bugs
-
-Desarrollado con ❤️ por Sergio Enrique Vargas🦊 para Stradivarius
+Developed with ❤️ by Sergio Enrique Vargas🦊 
